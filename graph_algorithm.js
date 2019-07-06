@@ -21,7 +21,6 @@ function browseEverySingleNode(currentNode, nodes){
     if(allNodesIsVisited(nodes)){
         return true;
     }
-    //the current node is visited
     nodes[currentNode].visited = true;
     nodes[currentNode].neighbours.map((currentNeighbour) => {    
             // In case of the Neighbour is not visited yet
@@ -42,9 +41,8 @@ function allNodesIsVisited(nodes){
     return allVisited;
 }
 
-
-
 console.log(browseTheGraph(nodes, "A"));
+
 
 module.exports = {browseTheGraph, nodes};
 
